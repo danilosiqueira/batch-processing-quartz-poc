@@ -7,6 +7,7 @@ using BatchProcessingQuartzPoc.Domain;
 using BatchProcessingQuartzPoc.Infrastructure.Persistence;
 using BatchProcessingQuartzPoc.Infrastructure.Quartz;
 using Microsoft.EntityFrameworkCore;
+using Quartz;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,7 @@ builder.Services.AddOpenApi();
 
 var connectionString = builder.Configuration.GetConnectionString("BatchDb")
     ?? builder.Configuration["POSTGRES_CONNECTION"]
-    ?? "Host=localhost;Port=5432;Database=batch_db;Username=batch_user;Password=batch_password";
+    ?? "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=postgres";
 
 builder.Services.AddDbContext<BatchDbContext>(options => options.UseNpgsql(connectionString));
 
