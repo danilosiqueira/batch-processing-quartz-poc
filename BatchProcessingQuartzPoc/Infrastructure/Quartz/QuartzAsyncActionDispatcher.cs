@@ -21,8 +21,8 @@ public class QuartzAsyncActionDispatcher : IAsyncActionDispatcher
         var jobData = new JobDataMap
         {
             { JobDataKeys.ActionType, actionType },
-            { JobDataKeys.BatchActionId, batchActionId },
-            { JobDataKeys.BatchActionItemId, batchActionItemId },
+            { JobDataKeys.BatchActionId, batchActionId.ToString() },
+            { JobDataKeys.BatchActionItemId, batchActionItemId.ToString() },
             { JobDataKeys.ItemReference, itemReference }
         };
 

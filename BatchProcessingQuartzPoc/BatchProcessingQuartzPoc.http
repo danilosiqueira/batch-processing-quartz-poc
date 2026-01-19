@@ -1,6 +1,16 @@
-@BatchProcessingQuartzPoc_HostAddress = http://localhost:5137
+@host = http://localhost:5137
 
-GET {{BatchProcessingQuartzPoc_HostAddress}}/weatherforecast/
+### Create a batch action
+POST {{host}}/batch-actions
+Content-Type: application/json
+
+{
+  "items": ["item-1", "item-2", "item-3"]
+}
+
+### Get a batch action status
+@actionId = 5b62c8ae-f2b9-4cea-90eb-2a3f46d161cd
+GET {{host}}/batch-actions/{{actionId}}
 Accept: application/json
 
 ###
