@@ -4,6 +4,7 @@ using Quartz;
 
 namespace BatchProcessingQuartzPoc.Infrastructure.Quartz;
 
+[DisallowConcurrentExecution]
 public class ProcessItemJob : IJob
 {
     public static readonly JobKey Key = new("ProcessItemJob");

@@ -36,7 +36,7 @@ public class ProcessItemHandler : IActionHandler
 
         try
         {
-            await Task.Delay(TimeSpan.FromMilliseconds(300), cancellationToken);
+            await Task.Delay(TimeSpan.FromMilliseconds(3000), cancellationToken);
             item.MarkCompleted();
         }
         catch (Exception ex) when (ex is not OperationCanceledException)
