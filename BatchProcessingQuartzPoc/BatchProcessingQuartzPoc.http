@@ -1,0 +1,6 @@
+@BatchProcessingQuartzPoc_HostAddress = http://localhost:5137
+
+GET {{BatchProcessingQuartzPoc_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

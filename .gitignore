@@ -1,0 +1,17 @@
+bin/
+obj/
+**/bin/
+**/obj/
+*.user
+*.swp
+*.swo
+*.sln.docstates
+.env
+.vscode/
+.DS_Store
+*.db
+*.sqlite
+*.sqlite3
+node_modules/
+*.log
+.idea/
